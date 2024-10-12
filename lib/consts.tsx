@@ -27,10 +27,6 @@ export const EVENT_ZORA_TOKENS = 'zora+tokens';
 export const EVENT_ZORA_COLLECTIONS = 'zora+collections';
 export const EVENT_ZORA_REWARDS = 'zora+rewards';
 export const EVENT_ZORA_SCORE = 'zora+score';
-export const EVENT_ZORA_REWARDS_CREATOR = 'RewardsDeposit-createReferral-zora';
-export const EVENT_ZORA_REWARDS_MINT_REFERRAL = 'zora+rewards+mint';
-export const EVENT_ZORA_REWARDS_CREATE_REFERRAL = 'zora+rewards+create';
-export const EVENT_ZORA_REWARDS_FIRST_MINTER = 'zora+rewards+first';
 export const EVENT_ZORA_PROFILE = 'zora+profile';
 
 // zora score
