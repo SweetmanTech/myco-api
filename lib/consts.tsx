@@ -27,10 +27,6 @@ export const EVENT_ZORA_TOKENS = 'zora+tokens';
 export const EVENT_ZORA_COLLECTIONS = 'zora+collections';
 export const EVENT_ZORA_REWARDS = 'zora+rewards';
 export const EVENT_ZORA_SCORE = 'zora+score';
-export const EVENT_ZORA_REWARDS_CREATOR = 'zora+rewards+creator';
-export const EVENT_ZORA_REWARDS_MINT_REFERRAL = 'zora+rewards+mint';
-export const EVENT_ZORA_REWARDS_CREATE_REFERRAL = 'zora+rewards+create';
-export const EVENT_ZORA_REWARDS_FIRST_MINTER = 'zora+rewards+first';
 export const EVENT_ZORA_PROFILE = 'zora+profile';
 
 // zora score
@@ -38,5 +34,5 @@ export const FOLLOWERS_PERFECT = 55555;
 
 // stack point systems
 export const TOKEN_INDEXER_POINT_ID = 3500;
-export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 3078;
+export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 4272;
 export const SETTINGS_STACK_ID = 3067;

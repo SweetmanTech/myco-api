@@ -3,20 +3,16 @@ import { Address } from 'viem';
 import trackEndpoint from '@/lib/stack/trackEndpoint';
 import { EVENT_ZORA_REWARDS } from '@/lib/consts';
 import getRewardsPoints from '@/lib/stack/getRewardsPoints';
-import indexNewRewards from '@/lib/indexNewRewards';
-import formatBigIntValues from '@/lib/formatBigIntValues';
 
 export async function GET(request: NextRequest) {
   try {
     await trackEndpoint(EVENT_ZORA_REWARDS);
     const address = new URL(request.url).searchParams.get('address') as Address;
-    const rewards = await getRewardsPoints(address);
-    const newLogs = await indexNewRewards(address);
+    const response = await getRewardsPoints(address);
     return Response.json({
       message: 'success',
       address,
-      ...rewards,
-      newLogs: formatBigIntValues(newLogs),
+      response,
     });
   } catch (error) {
     console.error('Error:', error);

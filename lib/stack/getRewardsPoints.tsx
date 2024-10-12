@@ -1,36 +1,47 @@
-import {
-  EVENT_ZORA_REWARDS_CREATE_REFERRAL,
-  EVENT_ZORA_REWARDS_CREATOR,
-  EVENT_ZORA_REWARDS_FIRST_MINTER,
-  EVENT_ZORA_REWARDS_MINT_REFERRAL,
-} from '@/lib/consts';
 import { rewardStack } from '@/lib/stack/client';
-import { Address } from 'viem';
+import { Address, getAddress } from 'viem';
 
 const getRewardsPoints = async (address: Address) => {
   const [
-    creatorRewards,
-    createReferralRewards,
-    mintReferralRewards,
-    firstMinterRewards,
+    zoraCreateReferralRewards,
+    zoraMintReferralRewards,
+    zoraFirstMinterRewards,
+    zoraCreatorRewards,
+    baseCreateReferralRewards,
+    baseMintReferralRewards,
+    baseFirstMinterRewards,
+    baseCreatorRewards,
     totalRewards,
     events,
   ] = await Promise.all([
-    rewardStack.getPoints(address, { event: EVENT_ZORA_REWARDS_CREATOR }),
-    rewardStack.getPoints(address, { event: EVENT_ZORA_REWARDS_CREATE_REFERRAL }),
-    rewardStack.getPoints(address, { event: EVENT_ZORA_REWARDS_MINT_REFERRAL }),
-    rewardStack.getPoints(address, { event: EVENT_ZORA_REWARDS_FIRST_MINTER }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-createReferral-zora' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-mintReferral-zora' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-firstMinter-zora' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-creator-zora' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-createReferral-base' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-mintReferral-base' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-firstMinter-base' }),
+    rewardStack.getPoints(address, { event: 'RewardsDeposit-firstMinter-base' }),
     rewardStack.getPoints(address),
     rewardStack.getEvents({
-      address,
+      query: rewardStack
+        .eventsQuery()
+        .where({
+          associatedAccount: getAddress(address),
+        })
+        .build(),
     }),
   ]);
 
   return {
-    creatorRewards,
-    createReferralRewards,
-    mintReferralRewards,
-    firstMinterRewards,
+    zoraCreateReferralRewards,
+    zoraMintReferralRewards,
+    zoraFirstMinterRewards,
+    zoraCreatorRewards,
+    baseCreateReferralRewards,
+    baseMintReferralRewards,
+    baseFirstMinterRewards,
+    baseCreatorRewards,
     totalRewards,
     events,
   };
