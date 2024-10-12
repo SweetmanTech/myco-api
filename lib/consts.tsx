@@ -13,7 +13,7 @@ export const ZORA_FEE_RECIPIENTS = [
 export const DEMO_ADDRESS = '0x33912a0d6bEFf5Fb8e5B70688CE858D5e7E8104E' as Address;
 
 // hypersub
-export const HYPERSUB_SUBSCRIPTION_ADDRESS = "0xb5a4ca234730dfb411ec16513ed2cff9b16a85d9"
+export const HYPERSUB_SUBSCRIPTION_ADDRESS = '0xb5a4ca234730dfb411ec16513ed2cff9b16a85d9';
 
 // viem
 export const INITIAL_BLOCK_RANGE = 1_000_000n;
@@ -27,7 +27,7 @@ export const EVENT_ZORA_TOKENS = 'zora+tokens';
 export const EVENT_ZORA_COLLECTIONS = 'zora+collections';
 export const EVENT_ZORA_REWARDS = 'zora+rewards';
 export const EVENT_ZORA_SCORE = 'zora+score';
-export const EVENT_ZORA_REWARDS_CREATOR = 'zora+rewards+creator';
+export const EVENT_ZORA_REWARDS_CREATOR = 'RewardsDeposit-createReferral-zora';
 export const EVENT_ZORA_REWARDS_MINT_REFERRAL = 'zora+rewards+mint';
 export const EVENT_ZORA_REWARDS_CREATE_REFERRAL = 'zora+rewards+create';
 export const EVENT_ZORA_REWARDS_FIRST_MINTER = 'zora+rewards+first';
@@ -38,4 +38,4 @@ export const FOLLOWERS_PERFECT = 55555;
 
 // stack point systems
 export const TOKEN_INDEXER_POINT_ID = 3500;
-export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 3078;
+export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 4272;
