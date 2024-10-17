@@ -41,5 +41,4 @@ export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 4272;
 export const SETTINGS_STACK_ID = 3067;
 
 //conversions
-
 export const ETH_TO_SPARKS = Math.pow(10, 6);

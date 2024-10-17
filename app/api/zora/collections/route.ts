@@ -33,6 +33,7 @@ export async function GET(request: NextRequest) {
     const collections = Object.values(aggregatedData).map((collection: any) => {
       const chain = collection.metadata.uniqueId.split('-')[0];
       const chainId = getChainId(chain);
+
       return {
         tokensCreated: collection.points,
         address: collection.metadata.collection,
