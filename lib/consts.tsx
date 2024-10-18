@@ -33,12 +33,9 @@ export const EVENT_ZORA_PROFILE = 'zora+profile';
 export const FOLLOWERS_PERFECT = 55555;
 export const MAX_CREATE_SCORE = 111;
 export const SCORE_FACTOR = 0.33;
-export const MAX_REWARD_SCORE = 0.222;
+export const MAX_REWARD_SCORE = 222000;
 
 // stack point systems
 export const TOKEN_INDEXER_POINT_ID = 3500;
 export const REWARDS_DEPOSIT_POINT_SYSTEM_ID = 4272;
 export const SETTINGS_STACK_ID = 3067;
-
-//conversions
-export const ETH_TO_SPARKS = Math.pow(10, 6);
